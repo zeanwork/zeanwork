@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	#
+	# Descomente as duas linhas abaixo para redirecionar
+	# o seu dominio de www.example.com para example.com
+	#
+	#RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+	#RewriteRule ^(.*) http://%1/$1 [R=301,L]
+
+	#
+	# Regras para a aplicação
+	#
+	RewriteRule    ^$ Public/    [L]
+	RewriteRule    (.*) Public/$1 [L]
+</IfModule>
