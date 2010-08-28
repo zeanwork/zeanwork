@@ -1,1 +1,17 @@
 h1. "Zeanwork Framework PHP":http://zeanwork.com.br/
+
+h2. Sobre
+
+O Zeanwork é um framework de desenvolvimento de aplicações web, desenvolvido na plataforma PHP, que ajuda você a criar aplicativos com qualidade e produtividade, superando as suas perspectivas. 
+
+O Zeanwork é perfeito para desenvolver aplicações em uma equipe que separa o desenvolvimento black-start com o front-end, por isso, utilizamos o design pattern MVC, separando a aplicação em camadas (separa a lógica de aplicação da sua apresentação), com isso tornamos o desenvolvimento e manutenção dos aplicativos muito mais fácil e eficaz, sendo estes complexos ou não. 
+
+Este repositório é para desenvolvedores do Zeanwork. Todos os usuários devem baixar o Zeanwork em nosso "site oficial": http://zeanwork.com.br/.
+
+h2. Onde eu posso obter mais informações sobre o Zeanwork?
+
+* "Documentação":http://zeanwork.com.br/doc
+* "Tutoriais":http://zeanwork.com.br/tutorials
+* "Screencasts":http://zeanwork.com.br/screencasts
+* "Fórum":http://zeanwork.com.br/forum
+* "Blog":http://zeanwork.com.br/blog/
