@@ -106,7 +106,7 @@ class Input extends Zeanwork {
 			return $files;
 		else{
 			if(array_key_exists($who, $files))
-				return $post[$files];
+				return $files[$who];
 			else
 				return false;
 		}
