@@ -1118,7 +1118,7 @@ class Model extends Database {
 			$method = $params;
 		
 		$class = method_exists($this, $method) ? $this : 'Validation';
-		
+			
 		if(is_array($params)){
 			$params[0] = $value;
 			ksort($params);
@@ -1128,12 +1128,16 @@ class Model extends Database {
 				trigger_error('Call to undefined method '.$class.'::'.$method.'() in '.__FILE__.' on line '.__LINE__, E_USER_ERROR);
 		}else{
 			if($class === 'Validation'){
-				if(method_exists($class, $params))
-					return Validation::$params($value);
+				if(method_exists($class, $method))
+					return Validation::$method($value);
 				else
 					trigger_error('Call to undefined method Validation::'.$method.'() in '.__FILE__.' on line '.__LINE__, E_USER_ERROR);
-			}else
-				return false;
+			}else{
+				if(method_exists($this, $method)){
+					return $this->{$method}($value);
+				}else
+					trigger_error('Call to undefined method Model::'.$method.'() in '.__FILE__.' on line '.__LINE__, E_USER_ERROR);
+			}
 		}
 		return false;
 	}
